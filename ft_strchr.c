@@ -6,7 +6,7 @@
 /*   By: nsouza-o <nsouza-o@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 13:20:20 by nsouza-o          #+#    #+#             */
-/*   Updated: 2023/10/07 13:50:09 by nsouza-o         ###   ########.fr       */
+/*   Updated: 2023/10/07 17:10:06 by nsouza-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,17 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	int	i;
+	int		i;
+	char	*str2;
 
+	str2 = (char *)str;
 	i = 0;
-	while (str[i] != '\0')
+	while ((unsigned char)str[i] != (unsigned char)c)
 	{
-		if ((unsigned char)str[i] == (unsigned char)c)
-			return ((char *)&str[i]);
+		if (!str[i])
+			return (NULL);
 		i++;
+		str2++;
 	}
-	return (NULL);
+	return (str2);
 }
-
-/* #include <stdio.h>
-int main(void)
-{
-   const char lookat[] = "hello world";
-	int c = 'l';
-	char *result = ft_strchr(lookat, c);
-
-	if (result != NULL) {
-		printf("Caractere encontrado: %c\n", *result);
-		printf("Índice na string: %ld\n", result - lookat);
-	} else {
-		printf("Caractere não encontrado.\n");
-	}
-
-	return 0;
-}
- */

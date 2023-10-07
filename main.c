@@ -6,7 +6,7 @@
 /*   By: nsouza-o <nsouza-o@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:56:34 by nsouza-o          #+#    #+#             */
-/*   Updated: 2023/10/06 17:06:18 by nsouza-o         ###   ########.fr       */
+/*   Updated: 2023/10/07 17:53:49 by nsouza-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 
 int main (void)
 {
-    //int c = ' ';
+    int c = 'o';
     //const char str[] = "Nicole";
-    //char str[] = "Nicole";
+    char str[] = "Nicole";
     //char str1[] = "ol";
-    char s1[] = "abc";
-    char s2[] = "defttt";
+    // char s1[] = "abc";
+    // char s2[] = "defttt";
 
     //printf("%d\n", isalpha(c));
     //printf("%d\n", ft_isalpha(c));
@@ -74,10 +74,10 @@ int main (void)
     //printf("%d\n", ft_strncmp(s1, s2, 4));
     //printf("%d\n", strncmp(s1, s2, 4));
 
-    /*char *res = ft_memchr(str, c, 5);
+    char *res = ft_memchr(str, c, 5);
     char *res1 = memchr(str, c, 5);
     printf("%s\n", res);
-    printf("%s\n", res1);*/
+    printf("%s\n", res1);
 
     /*int result = memcmp(s1, s2, 3); 
     printf("%d\n", result);    
@@ -93,11 +93,11 @@ int main (void)
     //printf("%s\n", ft_strnstr(str, str1, 0));
     //printf("%s\n", strnstr(str, str1, 0));
     
-    char    *result = memmove(s1, s2, 3); 
+    /* char    *result = memmove(s1, s2, 3); 
     printf("%s\n", result);    
     char    *result2 = ft_memmove(s1, s2, 3); 
     printf("%s\n", result2);
-
+ */
     //printf("%s\n", ft_strdup(str));
     //printf("%s\n", strdup(str));
 
