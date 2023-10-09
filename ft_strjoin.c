@@ -1,45 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsouza-o <nsouza-o@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 11:53:30 by nsouza-o          #+#    #+#             */
-/*   Updated: 2023/10/09 16:05:07 by nsouza-o         ###   ########.fr       */
+/*   Created: 2023/10/09 14:47:57 by nsouza-o          #+#    #+#             */
+/*   Updated: 2023/10/09 16:16:55 by nsouza-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char			*subs;
-	size_t			i;
+	char	*res;
+	size_t	size;
+	int		i;
+	int		j;
 
-	if (!s)
+	if (!s1 || !s2)
 		return (NULL);
-	if (start > ft_strlen(s))
-		return (ft_strdup(""));
-	if (len > ft_strlen(s) - start)
-		len = ft_strlen(s) - start;
-	subs = (char *)malloc((len + 1) * sizeof(char));
-	if (!subs)
+	size = ft_strlen(s1) + ft_strlen(s2);
+	res = (char *)malloc((size + 1) * sizeof(char));
+	if (!res)
 		return (NULL);
 	i = 0;
-	while (i < len && s[start + i])
-	{
-		subs[i] = s[start + i];
-		i++;
-	}
-	subs[i] = '\0';
-	return (subs);
+	j = 0;
+	while (s1[j] != '\0')
+		res[i++] = s1[j++];
+	j = 0;
+	while (s2[j] != '\0')
+		res[i++] = s2[j++];
+	res[i] = '\0';
+	return (res);
 }
-/* 
-#include <stdio.h>
+/* #include <stdio.h>
 
 int main(void)
 {
-	char const *s = "hola";
-	printf("%s", ft_substr(s, 0, 18446744073709551615));
-}  */
+	char const *s1 = "aaa";
+	char const *s2 = "bbb";
+	
+	printf("%s", ft_strjoin(s1, s2));
+} */
