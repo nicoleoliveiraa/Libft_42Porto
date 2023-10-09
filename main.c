@@ -12,16 +12,16 @@
 
 #include "libft.h"
 #include <stdio.h>
-#include <bsd/bsd.h>
+//#include <bsd/bsd.h>
 
 int main (void)
 {
-    int c = 'o';
+    //int c = 'o';
     //const char str[] = "Nicole";
     char str[] = "Nicole";
-    //char str1[] = "ol";
-    // char s1[] = "abc";
-    // char s2[] = "defttt";
+    char str1[] = "ol";
+    //  char s1[] = "aaaa";
+    //  char s2[] = "aaar";
 
     //printf("%d\n", isalpha(c));
     //printf("%d\n", ft_isalpha(c));
@@ -74,15 +74,15 @@ int main (void)
     //printf("%d\n", ft_strncmp(s1, s2, 4));
     //printf("%d\n", strncmp(s1, s2, 4));
 
-    char *res = ft_memchr(str, c, 5);
+    /* char *res = ft_memchr(str, c, 5);
     char *res1 = memchr(str, c, 5);
     printf("%s\n", res);
     printf("%s\n", res1);
-
-    /*int result = memcmp(s1, s2, 3); 
+    */
+    /* int result = memcmp(s1, s2, 3); 
     printf("%d\n", result);    
     int result2 = ft_memcmp(s1, s2, 3); 
-    printf("%d\n", result2);*/
+    printf("%d\n", result2); */
         
     /*const char nptr[] = "   -9871-5";
     int i = atoi(nptr);
@@ -101,6 +101,7 @@ int main (void)
     //printf("%s\n", ft_strdup(str));
     //printf("%s\n", strdup(str));
 
-    
+    ft_memcpy(str1, str, 7);
+    printf("%s\n", str1);
 
 }
