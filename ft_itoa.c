@@ -6,19 +6,19 @@
 /*   By: nsouza-o <nsouza-o@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 17:09:50 by nsouza-o          #+#    #+#             */
-/*   Updated: 2023/10/09 17:18:54 by nsouza-o         ###   ########.fr       */
+/*   Updated: 2023/10/10 11:44:56 by nsouza-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_len (long int nbr)
+static int	ft_len(long int nbr)
 {
-	int c;
+	int	c;
 
 	c = 0;
 	if (nbr == 0)
-	return (1);
+		return (1);
 	if (nbr < 0)
 	{
 		c++;
@@ -32,24 +32,26 @@ static int ft_len (long int nbr)
 	return (c);
 }
 
+static char	*ft_iszero(char	*str)
+{
+	str[0] = '0';
+	str[1] = '\0';
+	return (str);
+}
+
 char	*ft_itoa(int n)
 {
-	int c;
-	int i;
-	long int nb;
-	char *str;
+	int			i;
+	long int	nb;
+	char		*str;
 
-	nb = nbr;
+	nb = n;
 	i = ft_len(nb);
-	str = (char*)malloc(sizeof(char) * i + 1);
+	str = (char *)malloc(sizeof(char) * (i + 1));
 	if (str == NULL)
 		return (NULL);
 	if (nb == 0)
-	{
-		str[0] = '0';
-		str[i] = '\0';
-		return (str);
-	}
+		return (ft_iszero(str));
 	if (nb < 0)
 	{
 		str[0] = '-';
@@ -63,7 +65,7 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
+/* 
 #include <stdio.h>
 int main(void)
 {
@@ -74,4 +76,4 @@ int main(void)
 	str = ft_itoa(nbr);
 	printf("%s\n", str);
 	return (0);
-}
+} */

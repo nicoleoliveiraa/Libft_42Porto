@@ -6,7 +6,7 @@
 /*   By: nsouza-o <nsouza-o@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:56:34 by nsouza-o          #+#    #+#             */
-/*   Updated: 2023/10/07 17:53:49 by nsouza-o         ###   ########.fr       */
+/*   Updated: 2023/10/10 14:17:18 by nsouza-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,5 +103,11 @@ int main (void)
 
     ft_memcpy(str1, str, 7);
     printf("%s\n", str1);
+
+	char const *s1 = "\t   \n\n\n  \n\n\t    Hello \t  Please\n Trim me !\t\t\t\n  \t\t\t\t  ";
+	char const *set = " \n\t";
+	char *r = ft_strtrim(s1, set);
+	printf("%s\n", r);
+
 
 }
