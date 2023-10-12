@@ -6,7 +6,7 @@
 /*   By: nsouza-o <nsouza-o@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 13:57:52 by nsouza-o          #+#    #+#             */
-/*   Updated: 2023/10/11 15:06:10 by nsouza-o         ###   ########.fr       */
+/*   Updated: 2023/10/11 17:54:36 by nsouza-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef	struct s_list
+{
+	
+}
 
 //Part 1 - Libcfunctions
 int		ft_atoi(const char *nptr);
