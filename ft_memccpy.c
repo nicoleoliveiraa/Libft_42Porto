@@ -21,22 +21,21 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (((char *)src)[i] == c)
-			return ((char *)dest + i + 1);
-		((char *)dest)[i] = ((char *)src)[i];
+		if (((unsigned char *)src)[i] == c)
+			return ((unsigned char *)dest + i + 1);
+		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		i++;
 	}
 	return (NULL);
 }
-/* 
-#include <stdio.h>
-int main(void)
+
+/* int main(void)
 {
 	const char *source = "Hello, World!";
 	char destination[20];
-	int stop_char = 'e';
+	int stop_char = 'b';
 
-	void *result = ft_memccpy(destination, source, stop_char, sizeof(destination));
+	void *result = ft_memccpy(destination, source, stop_char, 20);
 
 	if (result != NULL) {
 		printf("Caractere de parada encontrado: %c\n", *(char *)result);

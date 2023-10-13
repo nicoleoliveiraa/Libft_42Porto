@@ -65,8 +65,8 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-/* 
-#include <stdio.h>
+
+/* #include <stdio.h>
 int main(void)
 {
 	int nbr;
@@ -76,4 +76,4 @@ int main(void)
 	str = ft_itoa(nbr);
 	printf("%s\n", str);
 	return (0);
-} */
+}  */

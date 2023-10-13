@@ -14,11 +14,20 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	unsigned char	*array;
+	unsigned char	*str;
 
-	array = (unsigned char *)malloc(nmemb * size);
-	if (array == NULL)
+	str = (unsigned char *)malloc(nmemb * size);
+	if (str == NULL)
 		return (NULL);
-	ft_bzero(array, nmemb * size);
-	return (array);
+	ft_bzero(str, nmemb * size);
+	return (str);
 }
+
+/* int main (void)
+{
+	char *str;
+    int tamanho = 5;
+
+	str = (char *)ft_calloc(tamanho, sizeof(char));
+	printf("%s\n", str);
+} */

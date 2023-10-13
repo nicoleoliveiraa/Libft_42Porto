@@ -23,3 +23,14 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
+
+/* int main(void)
+{
+	char str[] = "aa";
+	char str1[] = "aa";
+	
+	ft_bzero(str, 2);
+	printf("%s\n", str);
+	bzero(str1, 2);
+	printf("%s\n", str1);
+} */
