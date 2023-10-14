@@ -6,7 +6,7 @@
 /*   By: nsouza-o <nsouza-o@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 13:37:04 by nsouza-o          #+#    #+#             */
-/*   Updated: 2023/10/11 14:42:13 by nsouza-o         ###   ########.fr       */
+/*   Updated: 2023/10/14 13:14:37 by nsouza-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
+	size_t	size;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		write (fd, &s[i], 1);
-		i++;
-	}
+	size = ft_strlen(s);
+	write(fd, s, size);
 }

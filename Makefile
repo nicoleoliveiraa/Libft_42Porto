@@ -13,11 +13,14 @@ ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c \
 
 OBJS = $(SRCS:.c=.o)
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I.
+CC = cc
+CFLAGS = -Wall -Wextra -Werror 
 RM = rm -f
 
 all: $(NAME)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)

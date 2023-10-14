@@ -6,7 +6,7 @@
 /*   By: nsouza-o <nsouza-o@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 18:38:20 by nsouza-o          #+#    #+#             */
-/*   Updated: 2023/10/09 10:58:58 by nsouza-o         ###   ########.fr       */
+/*   Updated: 2023/10/14 17:03:39 by nsouza-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/* int main(void)
+/* 
+int main(void)
 {
 	const char *s1 = "aaaa";
 	const char *s2 = "aada";

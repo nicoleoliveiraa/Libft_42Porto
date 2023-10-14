@@ -6,7 +6,7 @@
 /*   By: nsouza-o <nsouza-o@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 13:09:04 by nsouza-o          #+#    #+#             */
-/*   Updated: 2023/10/07 13:46:47 by nsouza-o         ###   ########.fr       */
+/*   Updated: 2023/10/14 17:01:52 by nsouza-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-
-/* #include <stdio.h>
+/* 
+#include <stdio.h>
 #include <ctype.h>
 int main(void)
 {

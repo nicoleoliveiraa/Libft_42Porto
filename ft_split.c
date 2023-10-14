@@ -6,7 +6,7 @@
 /*   By: nsouza-o <nsouza-o@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 14:20:16 by nsouza-o          #+#    #+#             */
-/*   Updated: 2023/10/10 16:59:07 by nsouza-o         ###   ########.fr       */
+/*   Updated: 2023/10/14 19:50:17 by nsouza-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,6 @@ char	**ft_split(char const *s, char c)
 		else
 			i++;
 	}
-	sp[j] = '\0';
+	sp[j] = NULL;
 	return (sp);
 }
